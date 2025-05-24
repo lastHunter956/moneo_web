@@ -10,7 +10,7 @@ export default function Header() {
     { href: "#features", label: "Features" },
     { href: "#app-description", label: "App" },
     { href: "#testimonials", label: "Testimonials" },
-    { href: "#download", label: "Download" },
+    { href: "#preregister", label: "Waitlist" },
   ];
 
   return (
