@@ -24,8 +24,17 @@ export default function PreregisterForm() {
     setIsLoading(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("http://31.97.11.175:81/api/form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (!response.ok) {
+        throw new Error("Error en el envío del formulario");
+      }
 
       // Track successful submission
       trackForm("preregister", "submit");
