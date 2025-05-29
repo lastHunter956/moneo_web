@@ -24,7 +24,7 @@ export default function PreregisterForm() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://31.97.11.175:81/api/form", {
+      const response = await fetch("https://api.moneo-web.com/api/form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
